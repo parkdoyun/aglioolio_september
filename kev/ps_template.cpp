@@ -7,8 +7,8 @@
 #include <vector>
 using namespace std;
 
-#define rep(i, N) for(int i = 0; i < (N); ++i)
-#define iterate(it, v) for(auto it = v.begin(); it != v.end(); ++it)
+#define rep(i, n) for(int i = 0; i < (n); ++i)
+#define iterate(it, v) for(auto it = (v).begin(); it != (v).end(); ++it)
 #define all(v) (v).begin(), (v).end()
 #define size(v) (int)((v).size())
 
