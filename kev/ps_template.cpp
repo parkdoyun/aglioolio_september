@@ -1,11 +1,19 @@
-#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <cmath>
+#include <limits.h>
+#include <iostream>
+#include <queue>
+#include <string>
+#include <vector>
 using namespace std;
 
-#define rep(idx, n) for(int idx = 0; idx < (n); ++idx)
-#define all(container) (container).begin(), (container).end()
-#define size(container) (int)((container).size())
+#define rep(i, N) for(int i = 0; i < (N); ++i)
+#define iterate(it, v) for(auto it = v.begin(); it != v.end(); ++it)
+#define all(v) (v).begin(), (v).end()
+#define size(v) (int)((v).size())
+
+const int d4y[4] = {-1, 0, 1, 0};
+const int d4x[4] = {0, -1, 0, 1};
 
 void init();
 void solve();
