@@ -18,8 +18,6 @@ struct Ingredient{
     int cost;
 };
 
-
-
 int N;
 int P, F, S, V;
 int min_cost = INT_MAX;
