@@ -12,9 +12,8 @@ using namespace std;
 #define all(v) (v).begin(), (v).end()
 #define size(v) (int)((v).size())
 
-const int d4y[4] = {-1, 0, 1, 0};
-const int d4x[4] = {0, -1, 0, 1};
-
+int N, K;
+int binomial_coef[11][11];
 void init();
 void solve();
 
@@ -28,9 +27,18 @@ int main(){
 }
 
 void init(){
-    
+    cin >> N >> K;
 }
 
 void solve(){
-    
+    binomial_coef[0][0] = 1;
+    binomial_coef[1][0] = 1;
+    binomial_coef[1][1] = 1;
+    for(int n = 2; n <= N; n++){
+        for(int k = 0; k <= n; k++){
+            if(k == 0) binomial_coef[n][k] = 1;
+            else binomial_coef[n][k] = binomial_coef[n - 1][k - 1] + binomial_coef[n - 1][k];
+        }
+    }
+    cout << binomial_coef[N][K] << '\n';
 }
