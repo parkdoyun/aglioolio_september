@@ -3,6 +3,9 @@
 #include <queue>
 using namespace std;
 
+// 그래프 문제인지 판별 -> 의존성때문에 그래프 O
+// 가중치 유무 -> 다익스트라 
+
 struct Node {
 	int to;
 	int cost;
@@ -38,9 +41,8 @@ void dijkstra() {
 		int now = pq.top().to;
 		
 		pq.pop();
-
-		if (visited[now] != 0) continue;
-		visited[now] = 1;
+		
+		if (dist[now] < nowCost) continue;
 
 		for (int i = 0; i < computers[now].size(); i++) {
 			int nextCost = computers[now][i].cost;
@@ -63,7 +65,7 @@ void dijkstra() {
 
 void init() {
 	
-	for (int i = 0; i < 10001; i++) {
+	for (int i = 1; i < 10001; i++) {
 		computers[i].clear();
 	}
 }
@@ -90,4 +92,3 @@ int main() {
 
 	return 0;
 }
-
