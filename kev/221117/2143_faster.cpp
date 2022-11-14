@@ -49,6 +49,7 @@ int find_and_count(const vector<int>& seq, int value){
     return distance(lb, ub);
 }
 
+//test test
 void solve(){
     int T; cin >> T;
     
