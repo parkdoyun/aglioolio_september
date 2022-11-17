@@ -38,7 +38,6 @@ int main(){
 // 모든 구간합을 해시로 저장하면?
 // A 집합에서 M^2의 구간합이 나왔다면 M^2번 해시 연산을 통해 답이 나옴
 // 문제는 해시에 1000000개의 키 값을 저장하는게 속도에 지장이 없을지? -> 속도에는 큰 문제 없어보이는데
-// 답이 틀렸다... 왜?
 
 int find_and_count(const vector<int>& seq, int value){
     auto lb = lower_bound(all(seq), value);
