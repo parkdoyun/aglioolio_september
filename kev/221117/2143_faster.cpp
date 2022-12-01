@@ -81,8 +81,13 @@ void solve(){
 
     long long answer = 0;
     for(const auto& e: sub_a){
-        auto lb = lower_bound(all(sub_b), T - e);
-        auto ub = upper_bound(all(sub_b), T - e);
+        // 구간합 SubA의 원소 e
+        // 구간합 집합 SubB T-e
+        // 1 1 2 3 4 5 구간합 집합 A
+        auto lb = lower_bound(all(sub_b), T - e); 
+        auto ub = upper_bound(all(sub_b), T - e); 
+        // 4 4 3 2 1
+        // ^ . ^
         answer += distance(lb, ub);
     }
     cout << answer << '\n';
