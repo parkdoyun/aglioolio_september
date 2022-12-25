@@ -105,3 +105,4 @@ sord를 주었을 때'만' abs를 더해줬어야했는데 무조건 abs를 더�
 해결: gotSord flag를 놓고 칼을 주웠을 때 true로 선택해서 
 flag가 true 일때 abs 를 더해주는 식으로 구현
 */
+
