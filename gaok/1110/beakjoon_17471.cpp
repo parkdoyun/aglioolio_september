@@ -7,8 +7,8 @@ using namespace std;
 int n;
 int number[11];
 vector<int> Area[11];
-vector<int> path; // ¼±°Å±¸ 1
-vector<int> path2; // ¼±°Å±¸ 2
+vector<int> path; // Â¼Â±Â°Ã…Â±Â¸ 1
+vector<int> path2; // Â¼Â±Â°Ã…Â±Â¸ 2
 int visited[11];
 int minDiff = 2134567890;
 bool isConnected( int node, int len, int flag ) {
